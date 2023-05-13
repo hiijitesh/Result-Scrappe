@@ -10,7 +10,7 @@ def Result_Bot_function(RegistrationNo, url):
     '''
     This function scrap the data from webpage using BeautifulSoup4
     '''
-    url = f'http://results.akuexam.net/ResultsBTechBPharm8thSemPub2022.aspx?Sem=VIII&RegNo={RegistrationNo}'
+    url = "result.com"
     web = rqst.get(url)
 
     soup = bs(web.content, "html.parser")
@@ -87,6 +87,6 @@ def Result_Bot_function(RegistrationNo, url):
 
 
 RegistrationNo = 0
-url = f'http://results.akuexam.net/ResultsBTechBPharm8thSemPub2022.aspx?Sem=VIII&RegNo={RegistrationNo}'
+url = "result.com"
 
 Result_Bot_function(RegistrationNo, url)
