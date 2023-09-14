@@ -1,5 +1,4 @@
 date=$(date +%Y.%m.%d)
-echo "Building..."
 echo "Date"  $date
 echo "checkout to dev"
 git checkout dev
