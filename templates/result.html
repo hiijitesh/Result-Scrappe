@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Result Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 30px;
+            color: #333;
+        }
+
+        table {
+            width: 80%;
+            margin: 30px auto;
+            border-collapse: collapse;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f5f5f5;
+        }
+    </style>
+</head>
+<body>
+    <h1>Result</h1>
+    <table>
+        <tr>
+            <th>Student Name</th>
+            <th>Registration No</th>
+            <th>Branch</th>
+            <th>College</th>
+            <th>CGPA</th>
+            <th>Course Code</th>
+
+            <!-- Add more columns here -->
+        </tr>
+        {% for result in results %}
+        <tr>
+            <td>{{ result['Student Name'] }}</td>
+            <td>{{ result['Registration No'] }}</td>
+            <td>{{ result['Branch'] }}</td>
+            <td>{{ result['College Name'] }}</td>
+            <td>{{ result['CGPA'] }}</td>
+            <td>{{ result['Course Code'] }}</td>
+s
+            <!-- Add more columns here -->
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
